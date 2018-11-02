@@ -1,10 +1,11 @@
 ﻿(function()
 {
     var instance = this;
-
+        console.log("1");
     var initialiser = function()
     {
-        this.cadeauDAO = new CadeauDAO();
+
+        this.filmDAO = new FilmDAO();
 
         window.addEventListener("hashchange",naviguer);
 
@@ -18,23 +19,19 @@
 
         if(!hash)
         {
-            this.listeCadeauDonnee = this.cadeauDAO.lister();
-            var listeCadeauVue = new ListeCadeauVue(instance.listeCadeauDonnee);
-            listeCadeauVue.afficher();
-        }
-        else if(hash.match(/^#ajouter-cadeau/))
-        {
-            var ajouterCadeauVue = new AjouterCadeauVue(actionEnregistrerCadeau);
-            ajouterCadeauVue.afficher();
+            this.listeFilmDonnee = this.filmDAO.lister();
+            var listeFilmVue = new ListeFilmVue(instance.listeFilmDonnee);
+            listeFilmVue.afficher();
         }
         else
         {
-            var navigation = hash.match(/^#cadeau\/([0-9]+)/);
+            var navigation = hash.match(/^#film\/([0-9]+)/);
             //alert(navigation);
-            var idCadeau = navigation[1];
+            var idFilm = navigation[1];
             //alert(idCadeau);
-            var cadeauVue = new CadeauVue(instance.listeCadeauDonnee[idCadeau]);
-            cadeauVue.afficher();
+            var filmVue = new FilmVue(instance.listeFilmDonnee[idFilm]);
+            filmVue.afficher();
         }
-
     }
+    initialiser();
+})();
