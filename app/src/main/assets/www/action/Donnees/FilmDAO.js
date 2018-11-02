@@ -9,25 +9,6 @@
         }
     }
 
-    this.chercherAvecId = function(id)
-    {
-
-    }
-
-    this.ajouter = function(cadeau)
-    {
-        // il faut ici attribuer un id au cadeau
-        if(listeFilm.length > 0)
-            film.id = listeFilm[listeFilm.length-1].id + 1;
-        else
-            film.id = 0;
-
-        listeFilm[film.id] = film;
-        localStorage['film'] = JSON.stringify(listeFilm);
-        console.log("JSON.stringify(listeFilm) : " + JSON.stringify(listeFilm));
-
-    }
-
     this.lister = function()
     {
         console.log("lister->listeFilm : " + listeFilm);
