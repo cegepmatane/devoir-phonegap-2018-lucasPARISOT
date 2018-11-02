@@ -1,11 +1,13 @@
 ﻿var FilmDAO = function()
 {
     var listeFilm;
+
     var initialiser = function()
     {
         if(!listeFilm)
         {
-            listeFilm = [];
+            listeFilm = [new Film("Harry Potter","David Yates","film de magie, Best-Seller",1),
+                         new Film("ready player one","Steven Spielberg","film de cross-over du millieu vidéo-ludique, Best-Seller",1)];
         }
     }
 

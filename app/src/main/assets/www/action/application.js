@@ -1,7 +1,6 @@
 ﻿(function()
 {
     var instance = this;
-        console.log("1");
     var initialiser = function()
     {
 
