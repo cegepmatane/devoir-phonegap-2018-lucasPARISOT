@@ -1,14 +1,38 @@
 ﻿var FilmDAO = function()
 {
     var listeFilm;
-
     var initialiser = function()
     {
         if(!listeFilm)
         {
-            listeFilm = [new Film("Harry Potter","David Yates","film de magie, Best-Seller",1),
-                         new Film("ready player one","Steven Spielberg","film de cross-over du millieu vidéo-ludique, Best-Seller",1)];
+            listeFilm = [];
         }
+    }
+
+    this.chercherAvecId = function(id)
+    {
+        return listeFilm[id];
+    }
+
+    this.ajouter = function(film)
+    {
+        // il faut ici attribuer un id au film
+        if(listeFilm.length > 0)
+            film.id = listeFilm[listeFilm.length-1].id + 1;
+        else
+            film.id = 0;
+
+        listeFilm[film.id] = film;
+        localStorage['film'] = JSON.stringify(listeFilm);
+        console.log("JSON.stringify(listeFilm) : " + JSON.stringify(listeFilm));
+    }
+
+    this.modifier = function(film)
+    {
+        listeFilm[film.id] = film;
+        localStorage['film'] = JSON.stringify(listeFilm);
+        console.log("JSON.stringify(listeFilm[position]) : " + JSON.stringify(listeFilm));
+        // Le cadeau est bon, mais n'est pas modifier dans les local storage
     }
 
     this.lister = function()
@@ -30,5 +54,10 @@
         return listeFilm;
 
     }
+
+
+
+
+
     initialiser();
 }

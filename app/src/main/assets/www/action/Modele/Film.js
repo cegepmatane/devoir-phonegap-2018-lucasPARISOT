@@ -1,4 +1,4 @@
-var Film = function(nom,realisateur,description,id)
+var Film = function(nom, realisateur, description, id)
 {
 	this.id = id;
 	this.nom=nom;

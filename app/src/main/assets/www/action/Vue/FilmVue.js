@@ -1,4 +1,4 @@
-var FilmVue = (function(film)
+var FilmVue = (function(cadeau)
 {
 	var pageFilm = document.getElementById("page-film").innerHTML;
 	return function(film)
@@ -6,6 +6,8 @@ var FilmVue = (function(film)
 		var filmNom;
 		var filmRealisateur;
 		var filmDescription;
+
+		var  filmModification;
 
 		this.afficher = function()
 		{
@@ -19,6 +21,9 @@ var FilmVue = (function(film)
 
 			filmDescription = document.getElementById("film-description");
 			filmDescription.innerHTML = film.description;
+
+			filmModification = document.getElementById("modifier-film");
+			filmModification.href = '#modifier-film/' + film.id;
 		}
 	};
 })();

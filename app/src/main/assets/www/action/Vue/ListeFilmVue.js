@@ -1,4 +1,4 @@
-var ListeFilmVue = (function()
+﻿var ListeFilmVue = (function()
 {
     var pageListeFilm = document.getElementById("page-liste-film").innerHTML;
 
