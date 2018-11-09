@@ -1,13 +1,19 @@
 package ca.qc.cgmatane.informatique.myapplication;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import org.apache.cordova.*;
+import org.apache.cordova.DroidGap;
 
-public class ActivitePrincipale extends AppCompatActivity {
+public class ActivitePrincipale extends DroidGap { /* LE BON NOM DE CLASSE!!!!! */
+    /** The view to show the ad. */
+
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.vue_activite_principale);
+        super.init();
+        super.loadUrl(Config.getStartUrl());
+        super.loadUrl("file:///android_asset/www/index.html");
+
     }
 }
