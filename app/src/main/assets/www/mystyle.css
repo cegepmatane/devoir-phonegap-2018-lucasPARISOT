@@ -1,4 +1,15 @@
-h1, h2,p {
+h1 {
+	font-size: 24px;
+	color: #e65100;
+}
+
+h2 {
+	font-size: 20px;
+	color: #e65100;
+}
+
+p {
+	font-size: 18px;
 	color: #e65100;
 }
 
@@ -8,8 +19,7 @@ a, a:visited {
 	text-align: center;
 	display: inline-block;
 
-	font-size: 24px;
-	background-color: #e65100;
+	background-color: #ff833a;
 	width: 100%;
 }
 
@@ -23,21 +33,19 @@ ul li {
 	display: inline-block;
 	margin-bottom: 10px;
 
-	font-size: 24px;
 	padding-top: 8px;
 	padding-bottom: 8px;
-	background-color: #e65100;
+	background-color: #ff833a ;
 	width: 100%;
 }
 
 #filmAjoutera {
 	text-align: center;
 	display: inline-block;
-	color: white;
 	font-size: 24px;
 	padding-top: 8px;
 	padding-bottom: 8px;
-	background-color: #ff833a;
+	background-color: #e65100 ;
 	width: 100%;
 }
 
@@ -54,7 +62,7 @@ ul li {
 	display: inline-block;
 
 	font-size: 24px;
-	background-color: #e65100;
+	background-color: #ff833a;
 	width: 100%;
 	margin-bottom: 8px;
 	border: none;
