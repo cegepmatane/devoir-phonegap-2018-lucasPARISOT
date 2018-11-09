@@ -21,7 +21,7 @@
 	      <h1 id="film-nom"></h1>
 	      <h2 id="film-realisateur"></h2>
 	      <p id="film-description"></p>
-	      <a href="#">Revenir &agrave; la liste</a>
+	      <a id="revenirFilm" href="#">Revenir &agrave; la liste</a>
 	      <a id="modifier-film">Modifier un film</a>
 	    </div>
 	  </script>
@@ -31,33 +31,13 @@
 
 	    <form id="formulaire-ajouter">
 
-	      <fieldset>
+		    <input required type="text" name="nom" id="nom" placeholder="nom"/>
 
-	        <legend>Identification du film</legend>
+		    <input required type="text" name="realisateur" id="realisateur" placeholder="realisateur"/>
 
-	        <div>
-	          <label for="nom">Nom</label>
-	          <input required type="text" name="nom" id="nom"/>
-	        </div>
+		    <textarea required name="description" id="description" placeholder="description"></textarea>
 
-	        <div>
-	          <label for="realisateur">Realisateur</label>
-	          <input required type="text" name="realisateur" id="realisateur"/>
-	        </div>
-
-	      </fieldset>
-	      <fieldset>
-
-	        <legend>D&eacute;tails sur le film</legend>
-
-	        <div>
-	          <label for="description">Description</label>
-	          <textarea required name="description" id="description"></textarea>
-	        </div>
-
-	      </fieldset>
-
-	      <input type="submit" id="enregistrer" name="enregistrer" value="Enregistrer"/>
+		    <input type="submit" id="enregistrer" name="enregistrer" value="Enregistrer"/>
 
 	    </form>
 	    <a href="#">Annuler et revenir &agrave; la liste</a>
@@ -68,30 +48,11 @@
 
 	      <form id="formulaire-modifier">
 
-	        <fieldset>
+	        <textarea required name="nom" id="nom" placeholder="nom"></textarea>
 
-	          <legend>Identification du film</legend>
-
-	          <div>
-	            <label for="nom">Nom</label>
-	            <textarea required name="nom" id="nom"></textarea>
-	          </div>
-
-	          <div>
-	            <label for="realisateur">Realisateur</label>
-	            <textarea required name="realisateur" id="realisateur"></textarea>
-	          </div>
-
-	        </fieldset>
-	        <fieldset>
-	          <legend>D&eacute;tails sur le film</legend>
-
-	          <div>
-	            <label for="description">Description</label>
-	            <textarea required name="description" id="description"></textarea>
-	          </div>
-
-	        </fieldset>
+	        <textarea required name="realisateur" id="realisateur" placeholder="realisateur"></textarea>
+			
+			<textarea required name="description" id="description" placeholder="description"></textarea>
 
 	        <input type="submit" id="modifier" name="modifier" value="Modifier"/>
 
